@@ -13,7 +13,6 @@ from bot.helper.mirror_utils.status_utils import listeners
 from bot.helper.mirror_utils.status_utils.extract_status import ExtractStatus
 from bot.helper.mirror_utils.status_utils.tar_status import TarStatus
 from bot.helper.mirror_utils.status_utils.upload_status import UploadStatus
-from bot.helper.mirror_utils.upload_utils import gdriveTools
 from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot.helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper.message_utils import *
@@ -93,16 +92,6 @@ class MirrorListener(listeners.MirrorListeners):
                 path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
         else:
             path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
-        up_name = pathlib.PurePath(path).name
-        LOGGER.info(f"Upload Name : {up_name}")
-        drive = gdriveTools.GoogleDriveHelper(up_name, self)
-        if size == 0:
-            size = fs_utils.get_path_size(m_path)
-        upload_status = UploadStatus(drive, size, self)
-        with download_dict_lock:
-            download_dict[self.uid] = upload_status
-        update_all_messages()
-        drive.upload(up_name)
 
     def onDownloadError(self, error):
         error = error.replace('<', ' ')
