@@ -57,6 +57,14 @@ class MirrorListener(listeners.MirrorListeners):
             if name is None: # when pyrogram's media.file_name is of NoneType
                 name = os.listdir(f'{DOWNLOAD_DIR}{self.uid}')[0]
             m_path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
+            count = len(download_dict)
+            msg = f'Done Downloading: {download_dict[self.uid].name()}'
+            msg += f'\n\nPath: {m_path}'
+        sendMessage(msg, self.bot, self.update)
+        if count > 0:
+            self.clean()
+        else:
+            update_all_messages()
         if self.isTar:
             download.is_archiving = True
             try:
