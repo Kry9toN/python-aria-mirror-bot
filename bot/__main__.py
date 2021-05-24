@@ -71,15 +71,15 @@ def bot_help(update, context):
     help_string = f'''
 /{BotCommands.HelpCommand}: To get this message
 
-/{BotCommands.MirrorCommand} [download_url][magnet_link]: Start download the link to local OpenWrt
+/{BotCommands.MirrorCommand} [download_url][magnet_link]: Start downloading the link to local OpenWrt
 
-/{BotCommands.UnzipMirrorCommand} [download_url][magnet_link] : starts mirroring and if downloaded file is any archive , extracts it to local OpenWrt
+/{BotCommands.UnzipMirrorCommand} [download_url][magnet_link] : starts downloading and if downloaded file is any archive , extracts it to local OpenWrt
 
-/{BotCommands.TarMirrorCommand} [download_url][magnet_link]: start mirroring and upload the archived (.tar) version of the download
+/{BotCommands.TarMirrorCommand} [download_url][magnet_link]: start downloading and upload the archived (.tar) version of the download
 
-/{BotCommands.WatchCommand} [youtube-dl supported link]: Mirror through youtube-dl. Click /{BotCommands.WatchCommand} for more help.
+/{BotCommands.WatchCommand} [youtube-dl supported link]: Download through youtube-dl. Click /{BotCommands.WatchCommand} for more help.
 
-/{BotCommands.TarWatchCommand} [youtube-dl supported link]: Mirror through youtube-dl and tar before uploading
+/{BotCommands.TarWatchCommand} [youtube-dl supported link]: Download through youtube-dl and tar
 
 /{BotCommands.CancelMirror} : Reply to the message by which the download was initiated and that download will be cancelled
 
