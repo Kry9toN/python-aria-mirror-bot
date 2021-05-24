@@ -37,7 +37,7 @@ def stats(update, context):
 @run_async
 def start(update, context):
     start_string = f'''
-This is a bot which can mirror all your links to Google drive!
+This is a bot which can download to your local OpenWrt!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     sendMessage(start_string, context.bot, update)
@@ -71,9 +71,9 @@ def bot_help(update, context):
     help_string = f'''
 /{BotCommands.HelpCommand}: To get this message
 
-/{BotCommands.MirrorCommand} [download_url][magnet_link]: Start mirroring the link to google drive
+/{BotCommands.MirrorCommand} [download_url][magnet_link]: Start download the link to local OpenWrt
 
-/{BotCommands.UnzipMirrorCommand} [download_url][magnet_link] : starts mirroring and if downloaded file is any archive , extracts it to google drive
+/{BotCommands.UnzipMirrorCommand} [download_url][magnet_link] : starts mirroring and if downloaded file is any archive , extracts it to local OpenWrt
 
 /{BotCommands.TarMirrorCommand} [download_url][magnet_link]: start mirroring and upload the archived (.tar) version of the download
 
