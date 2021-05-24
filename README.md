@@ -1,5 +1,6 @@
 # What is this repo about?
-This is a telegram bot writen in python for mirroring files on the internet to our beloved Google Drive.
+This is a telegram bot writen in python for downloading files on the internet to local OpenWrt.
+> Google drive upload function disabled on this repo.
 
 # Inspiration 
 This project is heavily inspired from @out386 's telegram bot which is written in JS.
