@@ -6,7 +6,7 @@ This is a telegram bot writen in python for downloading files on the internet to
 This project is heavily inspired from @out386 's telegram bot which is written in JS.
 
 # Features supported:
-- Mirroring direct download links to google drive
+- Downloading direct download links to local OpenWrt
 - Download progress
 - Upload progress
 - Download/upload speeds and ETAs
