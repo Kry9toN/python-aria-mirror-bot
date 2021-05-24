@@ -58,8 +58,8 @@ class MirrorListener(listeners.MirrorListeners):
                 name = os.listdir(f'{DOWNLOAD_DIR}{self.uid}')[0]
             m_path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
             count = len(download_dict)
-            msg = f'Done Downloading: {download_dict[self.uid].name()}'
-            msg += f'\n\nPath: {m_path}'
+            msg = f'Done Downloading: <code>{download_dict[self.uid].name()}</code>'
+            msg += f'\n\nPath: <code>{m_path}</code>'
         sendMessage(msg, self.bot, self.update)
         if count > 0:
             self.clean()
