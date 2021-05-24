@@ -29,6 +29,11 @@ cd mirror-bot
 ```
 
 - Install requirements
+For OpenWrt
+```
+opkg install aria2 libmagic python3 python3-pip python3-cryptography python3-dev
+```
+
 For Debian based distros
 ```
 sudo apt install python3
