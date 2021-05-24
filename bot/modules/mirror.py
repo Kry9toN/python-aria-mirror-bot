@@ -213,6 +213,7 @@ def _mirror(bot, update, isTar=False, extract=False):
     sendStatusMessage(update, bot)
     if len(Interval) == 0:
         Interval.append(setInterval(DOWNLOAD_STATUS_UPDATE_INTERVAL, update_all_messages))
+    update_all_messages()
 
 
 @run_async
